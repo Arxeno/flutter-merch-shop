@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:inventory_merch_flutter/screens/inventorylist_form.dart';
 import 'package:inventory_merch_flutter/screens/menu.dart';
+import 'package:inventory_merch_flutter/widgets/drawer_button.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -32,31 +34,9 @@ class LeftDrawer extends StatelessWidget {
               ],
             ),
           ),
-          ListTile(
-            leading: const Icon(Icons.home_outlined),
-            title: const Text('Halaman Utama'),
-            // Bagian redirection ke MyHomePage
-            onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MyHomePage(),
-                  ));
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.add_shopping_cart),
-            title: const Text('Tambah Inventory'),
-            // Bagian redirection ke InventoryFormPage
-            // onTap: () {
-            //   // setelah halaman InventoryFormPage sudah dibuat.
-            //   Navigator.push(
-            //       context,
-            //       MaterialPageRoute(
-            //         builder: (context) => InventoryFormPage(),
-            //       ));
-            // },
-          ),
+          CustomDrawerButton(Icons.home_outlined, "Halaman Utama", "/"),
+          CustomDrawerButton(Icons.add_shopping_cart, "Tambah Inventory",
+              "form/inventory/create"),
         ],
       ),
     );
