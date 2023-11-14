@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventory_merch_flutter/widgets/inventory_card.dart';
+import 'package:inventory_merch_flutter/widgets/left_drawer.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
@@ -29,6 +30,7 @@ class MyHomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.amber,
       ),
+      drawer: const LeftDrawer(),
       body: SingleChildScrollView(
         // Widget wrapper yang dapat discroll
         child: Padding(
