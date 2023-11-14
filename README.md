@@ -36,3 +36,18 @@ Widget yang digunakan:
 1. Pertama, saya memisahkan widget-widget yang terbuat di menu.dart
 2. Saya membuat kelas InventoryItem yang nantinya akan menyimpan data-data item
 3. Saya membuat widget InventoryCard dengan komponen teks, icon, dan background color sesuai di kelas InventoryItem
+
+## TUGAS 8
+
+### 1. Jelaskan perbedaan antara `Navigator.push()` dan `Navigator.pushReplacement()`, disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+
+### 2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+
+### 3. Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+
+### 4. Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+
+1. Memindahkan `menu.dart` folder `screens`
+2. Menjadikan komponen InventoryCard menjadi ke dalam file terpisah (`inventory_card.dart`)
