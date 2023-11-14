@@ -53,3 +53,5 @@ Widget yang digunakan:
 2. Menjadikan komponen InventoryCard menjadi ke dalam file terpisah (`inventory_card.dart`)
 3. Membuat drawer
 4. Membuat komponen drawer button
+5. Membuat page form
+6. Mengarahkan setiap drawer ke route nya masing-masing
