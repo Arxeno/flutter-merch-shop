@@ -22,8 +22,8 @@ class _ShopFormPageState extends State<InventoryFormPage> {
             'Form Tambah Produk',
           ),
         ),
-        backgroundColor: Colors.indigo,
-        foregroundColor: Colors.white,
+        backgroundColor: Colors.amber,
+        foregroundColor: Colors.black54,
       ),
       body: Form(
         key: _formKey,
@@ -108,7 +108,7 @@ class _ShopFormPageState extends State<InventoryFormPage> {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.indigo),
+                  backgroundColor: MaterialStateProperty.all(Colors.amber),
                 ),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
@@ -141,7 +141,7 @@ class _ShopFormPageState extends State<InventoryFormPage> {
                 },
                 child: const Text(
                   "Save",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black54),
                 ),
               ),
             ),
