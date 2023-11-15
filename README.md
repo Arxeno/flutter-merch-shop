@@ -41,11 +41,36 @@ Widget yang digunakan:
 
 ### 1. Jelaskan perbedaan antara `Navigator.push()` dan `Navigator.pushReplacement()`, disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
 
+Navigator.push() => Menambah halaman ke dalam stack sehingga halaman yang ditambah itu berada di posisi paling atas stack.
+Contoh: `Navigator.push(context, MaterialPageRoute(builder: (context) => InventoryFormPage()));`
+
+Navigator.pushReplacement() => Ibarat nya seperti Navigator.pop() lalu Navigator.push().
+Contoh: `Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyHomePage()));`
+
 ### 2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+
+- Container => Seperti container biasa yang dapat membungkus lebih dari satu widget dan menyediakan properti padding, margin, dan dekorasi.
+- Row => Berfungsi untuk menyusun beberapa widget dalam bentuk horizontal/berbaris-baris
+- Column => Berfungsi untuk menyusun beberapa widget dalam bentuk vertikal/berkolom-kolom
+- ListView => Seperti Row atau Column namun dapat menjadi scrollable
+- GridView => Menyusun dalam bentuk grid atau kotak-kotak
+- Stack => memungkinkan widget ditumpuk satu di atas yang lain. Cocok untuk situasi di mana kita ingin menumpuk beberapa widget dan menyesuaikan posisi relatif mereka.
+- Expanded dan Flexible => Digunakan untuk mengontrol seberapa banyak ruang yang diambil oleh widget anak dalam arah tertentu. Biasanya digunakan didalam Row atau Column.
 
 ### 3. Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
 
+Elemen input form yang saya gunakan dalam tugas flutter ini adalah TextFormField(). Alasan saya menggunakan TextFormField adalah karena saya ingin mendapatkan data user dalam bentuk string dan integer.
+
 ### 4. Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+- Membuat folder `core/` didalam folder `lib/`
+- Membuat pula folder `features/` yang isinya adalah folder-folder yang berisi fitur utama yang ada didalam aplikasi (seperti `book/`, `admin/`, `event/` dst.)
+- Isi folder yang berisi fitur utama adalah seperti berikut:
+  - `data/`
+  - `presentation/`
+    - `cubit/`
+    - `pages/`
+    - `widgets/`
 
 ### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
 
