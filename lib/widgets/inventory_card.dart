@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:inventory_merch_flutter/screens/inventorylist_form.dart';
 
 class InventoryItem {
   final String name;
   final IconData icon;
   final Color backgroundColor;
+  final String? route;
 
-  InventoryItem(this.name, this.icon, this.backgroundColor);
+  InventoryItem(this.name, this.icon, this.backgroundColor,
+      [this.route = null]);
 }
 
 class InventoryCard extends StatelessWidget {
@@ -20,11 +23,18 @@ class InventoryCard extends StatelessWidget {
       child: InkWell(
         // Area responsive terhadap sentuhan
         onTap: () {
-          // Memunculkan SnackBar ketika diklik
-          ScaffoldMessenger.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(SnackBar(
-                content: Text("Kamu telah menekan tombol ${item.name}!")));
+          if (item.route != null) {
+            if (item.route == 'form/inventory/create') {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => InventoryFormPage()));
+            }
+          } else {
+            // Memunculkan SnackBar ketika diklik
+            ScaffoldMessenger.of(context)
+              ..hideCurrentSnackBar()
+              ..showSnackBar(SnackBar(
+                  content: Text("Kamu telah menekan tombol ${item.name}!")));
+          }
         },
         child: Container(
           // Container untuk menyimpan Icon dan Text
