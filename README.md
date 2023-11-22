@@ -80,3 +80,48 @@ Elemen input form yang saya gunakan dalam tugas flutter ini adalah TextFormField
 4. Membuat komponen drawer button
 5. Membuat page form
 6. Mengarahkan setiap drawer ke route nya masing-masing
+
+## TUGAS 9
+
+### 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Ya, di Flutter, Anda dapat melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Ini sering disebut sebagai "parsing JSON tanpa model" atau "JSON parsing dinamis". Flutter menyediakan dukungan untuk mem-parsing JSON secara dinamis tanpa harus membuat model khusus.
+
+Contoh menggunakan pendekatan ini adalah dengan menggunakan tipe data `Map<String, dynamic>` untuk mewakili objek JSON. Dengan cara ini, Anda dapat bekerja langsung dengan data JSON tanpa perlu membuat model terlebih dahulu. Namun, perlu diingat bahwa kelemahan utama dari pendekatan ini adalah kehilangan kestabilan tipe data dan dukungan penuh dari editor selama pengembangan, yang biasanya diberikan oleh model.
+
+### 2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+
+Kelas CookieRequest berfungsi untuk menunjang sistem kerja autentikasi pada flutter. Dalam kasus tugas ini CookieRequest yang disimpan adalah `last_login`.
+
+### 3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+1. Membuat URL menggunakan `Uri.parse()`.
+2. Memulai fetching data menggunakan module `http`. Proses ini dilakukan secara asinkronus.
+3. Decode response dari fetch menggunakan `jsonDecode` dan `utf8.decode()`.
+4. ...
+
+### 4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+1. User memasukkan username dan password.
+1. User menekan tombol 'login'.
+1. Program mengambil nilai username dan password menggunakan TextEditingController.
+1. Program fetching data ke backend menggunakan `request.login()` dengan membawa body request username dan password.
+1. jika log in berhasil (ditandai dengan `request.loggedIn`), maka halaman akan berpindah ke home page. Selain itu, show dialog "Login gagal".
+
+### 5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+- Scaffold
+- Container
+- Column
+- SizedBox
+- TextField
+- Elevated Button
+- TextButton
+
+### 6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+
+1. Menerapkan login.
+1. Membuat custom model Item.
+1. Integrasi fetch item data dari backend.
+1. Integrasi POST data Item.
+1. Menerapkan logout.
