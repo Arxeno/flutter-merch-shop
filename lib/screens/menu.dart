@@ -8,7 +8,7 @@ class MyHomePage extends StatelessWidget {
   final List<InventoryItem> items = [
     InventoryItem("Lihat Item", Icons.checklist, Colors.amber.shade100),
     InventoryItem("Tambah Item", Icons.add_shopping_cart, Colors.amber.shade200,
-        "form/inventory/create"),
+        "/form/inventory/create"),
     InventoryItem("Logout", Icons.logout, Colors.amber.shade300),
   ];
 

@@ -36,7 +36,8 @@ class LeftDrawer extends StatelessWidget {
           ),
           CustomDrawerButton(Icons.home_outlined, "Halaman Utama", "/"),
           CustomDrawerButton(Icons.add_shopping_cart, "Tambah Inventory",
-              "form/inventory/create"),
+              "/form/inventory/create"),
+          CustomDrawerButton(Icons.shopping_basket, "Daftar Item", "/inventory")
         ],
       ),
     );

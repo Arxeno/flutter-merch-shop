@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventory_merch_flutter/screens/inventorylist_form.dart';
+import 'package:inventory_merch_flutter/screens/list_item.dart';
 import 'package:inventory_merch_flutter/screens/menu.dart';
 
 class CustomDrawerButton extends StatelessWidget {
@@ -22,9 +23,14 @@ class CustomDrawerButton extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) => MyHomePage(),
               ));
-        } else if (route == "form/inventory/create") {
+        } else if (route == "/form/inventory/create") {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => InventoryFormPage()));
+        } else if (route == "/inventory") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ItemPage()),
+          );
         }
       },
     );
